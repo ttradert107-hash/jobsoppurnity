@@ -99,8 +99,15 @@ body{
     margin:0 auto 13px;
     padding:4px;
     border-radius:50%;
-    background:linear-gradient(135deg,#356dff,#8eb1ff);
-    box-shadow:0 10px 25px rgba(53,109,255,0.25);
+
+    background:linear-gradient(
+        135deg,
+        #356dff,
+        #8eb1ff
+    );
+
+    box-shadow:
+    0 10px 25px rgba(53,109,255,0.25);
 }
 
 .profile{
@@ -112,17 +119,20 @@ body{
 }
 
 
-/* SMALL LABEL */
+/* LABEL */
 
 .label{
     display:inline-block;
     padding:6px 13px;
     border-radius:30px;
+
     background:#edf4ff;
     color:#3168db;
+
     font-size:11px;
     font-weight:700;
     letter-spacing:.5px;
+
     margin-bottom:10px;
 }
 
@@ -165,35 +175,52 @@ h1{
     display:flex;
     align-items:center;
     justify-content:center;
-    gap:8px;
+    gap:9px;
 
     width:100%;
+    min-height:52px;
     padding:14px 18px;
 
     border-radius:15px;
 
     background:linear-gradient(
         135deg,
-        #356dff,
-        #174bd1
+        #356dff 0%,
+        #2457e8 50%,
+        #174bd1 100%
     );
 
-    color:#fff;
+    color:#ffffff;
     text-decoration:none;
 
     font-size:14px;
     font-weight:700;
+    letter-spacing:.1px;
+
+    border:1px solid rgba(255,255,255,0.20);
 
     box-shadow:
-    0 12px 25px rgba(53,109,255,.30);
+        0 9px 20px rgba(53,109,255,0.28),
+        inset 0 1px 0 rgba(255,255,255,0.25);
 
-    transition:.25s ease;
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
 }
 
 .main-btn:hover{
-    transform:translateY(-3px);
+    transform:translateY(-2px);
+
     box-shadow:
-    0 17px 30px rgba(53,109,255,.40);
+        0 13px 27px rgba(53,109,255,0.35),
+        inset 0 1px 0 rgba(255,255,255,0.30);
+}
+
+.main-btn:active{
+    transform:scale(.98);
+
+    box-shadow:
+        0 6px 14px rgba(53,109,255,0.22);
 }
 
 
@@ -210,8 +237,10 @@ h1{
 .feature{
     text-align:left;
     padding:11px 10px;
+
     border:1px solid #e7edf7;
     border-radius:13px;
+
     background:#fafcff;
 }
 
@@ -328,6 +357,13 @@ h1{
         margin-bottom:14px;
     }
 
+    .main-btn{
+        min-height:50px;
+        padding:13px 14px;
+        font-size:13px;
+        border-radius:14px;
+    }
+
     .features{
         gap:7px;
         margin-top:14px;
@@ -379,7 +415,7 @@ Handwriting Work & Jobs
 </h1>
 
 
-<!-- HANDWRITING STYLE TEXT -->
+<!-- HANDWRITING TEXT -->
 
 <div class="hand">
 Write • Learn • Explore Opportunities
@@ -398,10 +434,10 @@ and useful work opportunities in one place.
 
 <a
 href="https://t.me/+bo0V1FGrDL85MDNl"
-class="btn"
+class="main-btn"
 target="_blank"
 rel="noopener noreferrer"
-  onclick="fbq('track','Lead')"
+onclick="fbq('track','Lead')"
 >
 📚 Join Free Telegram Channel
 </a>
@@ -531,6 +567,7 @@ Digital Growth Zone
 </div>
 
 </div>
+
 
 </body>
 </html>
