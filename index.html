@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Handwriting Work & Education</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    min-height:100%;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#eef4ff;
+    color:#172033;
+}
+
+
+/* MAIN */
+
+.page{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px 12px;
+}
+
+
+/* CARD */
+
+.card{
+    width:100%;
+    max-width:430px;
+    background:#ffffff;
+    border-radius:28px;
+    padding:25px 20px 22px;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+
+    box-shadow:
+    0 20px 55px rgba(40,70,120,0.15);
+}
+
+
+/* TOP DECORATION */
+
+.card::before{
+    content:"";
+    position:absolute;
+    top:-80px;
+    right:-70px;
+    width:180px;
+    height:180px;
+    background:#dce9ff;
+    border-radius:50%;
+}
+
+.card::after{
+    content:"";
+    position:absolute;
+    bottom:-90px;
+    left:-70px;
+    width:180px;
+    height:180px;
+    background:#fff0c7;
+    border-radius:50%;
+}
+
+
+/* CONTENT */
+
+.content{
+    position:relative;
+    z-index:2;
+}
+
+
+/* PROFILE */
+
+.profile-wrap{
+    width:105px;
+    height:105px;
+    margin:0 auto 13px;
+    padding:4px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#356dff,#8eb1ff);
+    box-shadow:0 10px 25px rgba(53,109,255,0.25);
+}
+
+.profile{
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    object-fit:cover;
+    background:#f5f7fb;
+}
+
+
+/* SMALL LABEL */
+
+.label{
+    display:inline-block;
+    padding:6px 13px;
+    border-radius:30px;
+    background:#edf4ff;
+    color:#3168db;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.5px;
+    margin-bottom:10px;
+}
+
+
+/* TITLE */
+
+h1{
+    font-size:25px;
+    line-height:1.2;
+    font-weight:700;
+    color:#16233d;
+    margin-bottom:7px;
+}
+
+
+/* HANDWRITING TEXT */
+
+.hand{
+    font-family:'Patrick Hand',cursive;
+    color:#356dff;
+    font-size:22px;
+    margin-bottom:8px;
+}
+
+
+/* DESCRIPTION */
+
+.description{
+    font-size:12.5px;
+    line-height:1.6;
+    color:#69758a;
+    max-width:340px;
+    margin:0 auto 17px;
+}
+
+
+/* MAIN BUTTON */
+
+.main-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+
+    width:100%;
+    padding:14px 18px;
+
+    border-radius:15px;
+
+    background:linear-gradient(
+        135deg,
+        #356dff,
+        #174bd1
+    );
+
+    color:#fff;
+    text-decoration:none;
+
+    font-size:14px;
+    font-weight:700;
+
+    box-shadow:
+    0 12px 25px rgba(53,109,255,.30);
+
+    transition:.25s ease;
+}
+
+.main-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:
+    0 17px 30px rgba(53,109,255,.40);
+}
+
+
+/* FEATURES */
+
+.features{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:9px;
+    margin-top:17px;
+}
+
+
+.feature{
+    text-align:left;
+    padding:11px 10px;
+    border:1px solid #e7edf7;
+    border-radius:13px;
+    background:#fafcff;
+}
+
+
+.feature-icon{
+    font-size:17px;
+    margin-bottom:4px;
+}
+
+
+.feature-title{
+    font-size:11px;
+    font-weight:700;
+    color:#25324a;
+}
+
+
+.feature-text{
+    font-size:9.5px;
+    line-height:1.4;
+    color:#7a8496;
+    margin-top:2px;
+}
+
+
+/* EDUCATION BOX */
+
+.education{
+    margin-top:12px;
+    padding:12px 13px;
+    border-radius:14px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #fff8df,
+        #fffdf4
+    );
+
+    border:1px solid #f2e4b5;
+
+    text-align:left;
+}
+
+
+.education strong{
+    display:block;
+    font-size:12px;
+    color:#745b0b;
+    margin-bottom:3px;
+}
+
+
+.education span{
+    font-size:10px;
+    line-height:1.5;
+    color:#89784a;
+}
+
+
+/* DISCLAIMER */
+
+.disclaimer{
+    margin-top:12px;
+    font-size:9.5px;
+    line-height:1.5;
+    color:#8b94a3;
+}
+
+
+/* FOOTER */
+
+.footer{
+    margin-top:13px;
+    font-size:9.5px;
+    color:#9aa3b1;
+}
+
+.footer a{
+    color:#356dff;
+    text-decoration:none;
+    font-weight:600;
+}
+
+
+/* MOBILE */
+
+@media(max-width:400px){
+
+    .page{
+        padding:12px 9px;
+    }
+
+    .card{
+        padding:21px 16px 18px;
+        border-radius:24px;
+    }
+
+    .profile-wrap{
+        width:92px;
+        height:92px;
+    }
+
+    h1{
+        font-size:22px;
+    }
+
+    .hand{
+        font-size:20px;
+    }
+
+    .description{
+        font-size:11.5px;
+        margin-bottom:14px;
+    }
+
+    .features{
+        gap:7px;
+        margin-top:14px;
+    }
+
+    .feature{
+        padding:9px 8px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="page">
+
+<div class="card">
+
+<div class="content">
+
+
+<!-- PROFILE IMAGE -->
+
+<div class="profile-wrap">
+
+<img
+src="http://ss123.adpullse.in/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-05-at-4.07.00-AM.jpeg"
+class="profile"
+alt="Handwriting Work"
+>
+
+</div>
+
+
+<!-- LABEL -->
+
+<div class="label">
+✍️ WORK • LEARN • GROW
+</div>
+
+
+<!-- TITLE -->
+
+<h1>
+Handwriting Work & Jobs
+</h1>
+
+
+<!-- HANDWRITING STYLE TEXT -->
+
+<div class="hand">
+Write • Learn • Explore Opportunities
+</div>
+
+
+<!-- DESCRIPTION -->
+
+<p class="description">
+Discover handwriting-related projects, learning resources
+and useful work opportunities in one place.
+</p>
+
+
+<!-- MAIN BUTTON -->
+
+<a
+href="https://t.me/+bo0V1FGrDL85MDNl"
+class="btn"
+target="_blank"
+rel="noopener noreferrer"
+  onclick="fbq('track','Lead')"
+>
+📚 Join Free Telegram Channel
+</a>
+
+
+<!-- FEATURES -->
+
+<div class="features">
+
+
+<div class="feature">
+
+<div class="feature-icon">
+✍️
+</div>
+
+<div class="feature-title">
+Handwriting Work
+</div>
+
+<div class="feature-text">
+Explore writing and project-based opportunities.
+</div>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">
+💼
+</div>
+
+<div class="feature-title">
+Job Updates
+</div>
+
+<div class="feature-text">
+Useful information about available work opportunities.
+</div>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">
+📖
+</div>
+
+<div class="feature-title">
+Learning Support
+</div>
+
+<div class="feature-text">
+Improve your writing and practical skills.
+</div>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">
+🎓
+</div>
+
+<div class="feature-title">
+Education
+</div>
+
+<div class="feature-text">
+Helpful educational resources for learners.
+</div>
+
+</div>
+
+
+</div>
+
+
+<!-- EDUCATION BOX -->
+
+<div class="education">
+
+<strong>
+📚 Education & Skill Development
+</strong>
+
+<span>
+Learn useful handwriting techniques, explore educational
+resources and stay informed about relevant opportunities.
+</span>
+
+</div>
+
+
+<!-- DISCLAIMER -->
+
+<div class="disclaimer">
+
+⚠️ Opportunities may vary. Always verify work details,
+requirements and terms before applying.
+
+</div>
+
+
+<!-- FOOTER -->
+
+<div class="footer">
+
+✨ Powered by
+
+<a
+href="https://t.me/+aTUbkZxGi-c1N2I9"
+target="_blank"
+rel="noopener noreferrer"
+>
+Digital Growth Zone
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
